@@ -1,7 +1,7 @@
 This contains lstm for sak values observed at gitterköpf station using precipitation data from 2 rain gauges above the basin.
 LSTM for all time series, and one for each season are also compared.
 Box-cox transformation, robust scaler, and standard scaler are compared for normalizing the precipitation dataset. This transformation was deemed necessary, so that the information about extreme values are well incorporated into the training.   
-<img width="1526" height="1229" alt="image" src="https://github.com/user-attachments/assets/18e419df-87c6-40be-99c7-2afb7b3ca70c" />
+<img width="1990" height="494" alt="image" src="https://github.com/user-attachments/assets/50209b48-72f2-4fdc-b49c-700115e8ea3e" />
 Fig.1. Results of different transformation.
 
 Boxcox method was used for transformation, as this transformation handled extreme values well compared to others where outliers can still be observed. 
