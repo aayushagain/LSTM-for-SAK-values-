@@ -36,12 +36,12 @@ A single LSTM for the entire time series, as well as different LSTM for differen
 The, model rapidly jumps to overfitting without any much improvement in testing dataset as shown in Fig.3 and Fig.4, respectively. Furhter, the NSE for testing time period remains <0. Despite an NSE < 0, a positive correlation between the observed and predicted values was observed at training period for all datasets.
 
 <figure>
-  <img width="578" height="467" alt="image" src="https://github.com/user-attachments/assets/1420ad59-eacd-4ca2-9558-27fabaedfb63" />
+  <img width="578" height="467" alt="image" src="https://github.com/user-attachments/assets/1420ad59-eacd-4ca2-9558-27fabaedfb63" /><br>
   <figcaption><em>Fig.3. Training evolution.</em></figcaption>
 </figure>
 <br>
 <figure>
-  <img width="565" height="467" alt="image" src="https://github.com/user-attachments/assets/ead7aa7b-03fe-4d13-8a0f-00017efea454" />
+  <img width="565" height="467" alt="image" src="https://github.com/user-attachments/assets/ead7aa7b-03fe-4d13-8a0f-00017efea454" /><br>
   <figcaption><em>Fig.4. Testing evolution.</em></figcaption>
 </figure>
 <br>
