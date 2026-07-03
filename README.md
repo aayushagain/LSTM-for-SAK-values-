@@ -7,18 +7,20 @@ LSTM for all time series, and one for each season, are also compared.
 ## 1. Data Normalization
  
 Box-Cox transformation, robust scaler, and standard scaler are compared for normalizing the dataset. This transformation was deemed necessary, so that the information about extreme values are well incorporated into the training.
-<img width="1990" height="494" alt="image" src="https://github.com/user-attachments/assets/50209b48-72f2-4fdc-b49c-700115e8ea3e" />
-**Fig.1. Results of different transformation.**
+<figure>
+  <img width="1990" height="494" alt="image" src="https://github.com/user-attachments/assets/50209b48-72f2-4fdc-b49c-700115e8ea3e" />
+  <figcaption><em>Fig. 1. Results of different transformation.</em></figcaption>
+</figure>
 Boxcox method was used for transformation, as this transformation handled extreme values well compared to others where outliers can still be observed. Only precipitation datasets were transformed while training.
 
 ## 2. Model structure 
 LSTM with hidden_neurons = 64, hidden_layers = 2, output_layer = 1, and dropout = 0.5 was selected.
 
 Different loss functions i.e. NSE, MSELoss, and HuberLoss were experimented with. NSE loss was perturbed with a noise to keep it continuous. An interesting observation while training was that, while using NSE and MSELoss, model showed bias to mean and maximum values, respectively. i.e. While using NSE, the network learnt the mean value of SAK. Similarly, while using MSE, the network produced a higher than mean output such that higher squared error when mispredicting maximum values were reduced first. 
-
-<img width="1451" height="682" alt="image" src="https://github.com/user-attachments/assets/8aa8739c-4b4b-4cbf-88cb-a212ed6e6e9b" />
-**Fig.2.** Model fidelity to average value when using NSE.  
-
+<figure>
+  <img width="1451" height="682" alt="image" src="https://github.com/user-attachments/assets/8aa8739c-4b4b-4cbf-88cb-a212ed6e6e9b" />
+  <figcaption><em>Fig.2. Model fidelity to average value when using NSE. </figcaption></em>  
+</figure>
 Adam optimizer was used, as this allowed a larger learning rate compared to SGD.
 Due to smaller dataset, longer stride length, lower epoch was selected so that overfitting could be avoided. The epoch was limited between 150 to 250. 
 ## 3. Lag Time
